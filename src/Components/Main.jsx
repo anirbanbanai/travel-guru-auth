@@ -5,7 +5,7 @@ import lo from './images/Rectangle 1.png'
 
 const Main = () => {
     return (
-        <div className='w-full h-full op  min-h-screen' style={{ backgroundImage: `url("https://images.unsplash.com/photo-1590603740183-980e7f6920eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Y294JTIwYmF6YXJ8ZW58MHx8MHx8&w=1000&q=80")` , opacity:'revert-layer' , height:"100vh", backgroundSize:"cover"}}>
+        <div className='w-full h-full op  min-h-screen' style={{ backgroundImage: `url("https://i.ibb.co/9ZsK9N6/Rectangle-1.png")` , opacity:'revert-layer' , height:"100%", backgroundSize:"cover"}}>
              <Header></Header>
             <Outlet></Outlet>
         </div>

@@ -17,6 +17,7 @@ import Login from './Components/Login.jsx';
 import Register from './Components/Register.jsx';
 import RRouterProvider from './Components/RRouterProvider.jsx';
 import Booking from './Components/Booking.jsx';
+import SubDetails from './Components/SubDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -33,7 +34,8 @@ const router = createBrowserRouter([
       },
       {
         path:"/blog",
-        element:<Blog></Blog>
+        element:<Blog></Blog>,
+        loader:()=>fetch`http://localhost:5000/new`
       },
       {
         path:'/login',
@@ -43,7 +45,11 @@ const router = createBrowserRouter([
         path:"/register",
         element:<Register></Register>
       },
-      
+      {
+        path:"/blog/:id",
+        element:<SubDetails></SubDetails>,
+        loader:({params})=>fetch(`http://localhost:5000/new/${params.id}`)
+      }
       
     ]
   },
@@ -54,7 +60,7 @@ const router = createBrowserRouter([
     {
       path:"/details",
       element:<Details></Details>,
-      loader: ()=> fetch(`http://localhost:5000/new`)
+      loader: ()=> fetch(`https://travel-guru-anirbanbanai.vercel.app/new`)
     },
     {
       path:"/booking",
